@@ -1,0 +1,28 @@
+// colors -----------------------------------------------
+$blu: #294A70;
+$yel: #FFAB1F;
+$blk: #212121;
+$whi: #FFFFFF;
+// colors -----------------------------------------------
+
+header{
+    background-color: $blu;
+    border-bottom: 5px $yel solid;
+    padding: 30px 0;
+    
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a{
+            color: #fff;
+            margin: 0 20px;
+            font-variant: small-caps;
+            
+            &:hover{
+                color: $yel;
+            }//a hover end
+        }//a end
+    }//nav end
+}//header end
