@@ -9,12 +9,19 @@ $red: #912728;
 header{
     background-color: $red;
     border-bottom: 5px $yel solid;
-    padding: 30px 0;
+    padding: 10px 70px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+    img{
+        width: 50px;
+        padding: 10px 0;
+    }
+
     nav{
         display: flex;
-        justify-content: center;
-        align-items: center;
 
         a{
             color: #fff;
@@ -27,3 +34,15 @@ header{
         }//a end
     }//nav end
 }//header end
+
+@media only screen and (min-width: 600px) {
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+        img{
+            padding: 0;
+        }
+    }
+}
