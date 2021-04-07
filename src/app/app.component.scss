@@ -1,13 +1,12 @@
 // colors -----------------------------------------------
-$blu: #335C67;
-$yel: #DD962C;
+$blu: #294A70;;
+$yel: #FFAB1F;;
 $blk: #141414;
-$whi: #F5F5F5;
-$red: #912728;
+$whi: #FFFFFF;
 // colors -----------------------------------------------
 
 header{
-    background-color: $red;
+    background-color: $blu;
     border-bottom: 5px $yel solid;
     padding: 10px 70px 20px 70px;
     display: flex;
@@ -39,7 +38,7 @@ header{
     header{
         flex-direction: row;
         justify-content: space-between;
-        flex-wrap: wrap;
+        position: sticky;
         
         img{
             padding: 0;
