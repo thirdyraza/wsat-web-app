@@ -8,7 +8,7 @@ $whi: #FFFFFF;
 header{
     background-color: $blu;
     border-bottom: 5px $yel solid;
-    padding: 10px 50px 20px 70px;
+    padding: 20px 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,13 +20,15 @@ header{
     }
 
     nav{
-        display: flex;
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: auto auto auto auto;
+        grid-column-gap: 20px;
 
         a{
             color: #fff;
-            margin: 0 20px;
             font-variant: small-caps;
-            
+
             &:hover{
                 color: $yel;
             }//a hover end
