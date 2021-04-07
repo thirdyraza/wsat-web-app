@@ -11,39 +11,45 @@ $whi: #FFFFFF;
     background-repeat: no-repeat;
     background-position: bottom center;
     width: 100%;
-    height: 70vh;
+    height: 490px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    
 
     .text-area{
         padding: 10px;
         color: white;
+        font-variant: small-caps;
         h1{
             max-width: 900px;
-            font-size: 50px;
+            font-size: 55px;
             margin-bottom: 10px;
+            text-shadow: $blk 1px 1px 15px;
         }
         p{
             max-width: 600px;
             text-align: justify;
         }
         .buttons{
-            margin-top: 30px;
-            
+            margin-top: 10px;
+
             button{
-                background-color: $whi;
+                font-variant: small-caps;
+                font-weight: 600;
+                background-color: $yel;
                 color: $blk;
                 outline: none;
                 border: none;
-                padding: 8px 20px;
+                padding: 10px 20px;
                 margin-right: 10px;
                 box-shadow: $blk 3px 3px 5px;
-                border-radius: 3px;
+                transition: .1s;
+                box-shadow: $blk 5px 5px 5px;
 
                 &:hover{
-                    background-color: $blu;
+                    // background-color: $blu;
                     color: $whi;
                 }
             }
