@@ -8,16 +8,11 @@ $whi: #FFFFFF;
 header{
     background-color: $blu;
     border-bottom: 4px $yel solid;
-    padding: 20px 100px;
+    padding: 30px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     
-    img{
-        width: 50px;
-        padding: 10px 0;
-    }
-
     nav{
         display: grid;
         justify-content: space-between;
@@ -41,8 +36,5 @@ header{
         justify-content: space-between;
         position: sticky;
         
-        img{
-            padding: 0;
-        }//img end
     }//header end
 }//media querie end
