@@ -3,6 +3,7 @@ $blu: #294A70;;
 $yel: #FFAB1F;;
 $blk: #141414;
 $whi: #FFFFFF;
+$smk: #f5f5f5;
 // colors -----------------------------------------------
 
 .home-showcase{
@@ -20,12 +21,12 @@ $whi: #FFFFFF;
 
     .text-area{
         padding: 10px;
-        color: white;
+        color: $whi;
         font-variant: small-caps;
+
         h1{
-            max-width: 900px;
-            font-size: 55px;
-            margin-bottom: 10px;
+            font-size: 41px;
+            margin-bottom: 5px;
             text-shadow: $blk 1px 1px 15px;
         }
         p{
@@ -33,7 +34,7 @@ $whi: #FFFFFF;
             text-align: justify;
         }
         .buttons{
-            margin-top: 10px;
+            margin-top: 15px;
 
             button{
                 font-variant: small-caps;
@@ -56,3 +57,18 @@ $whi: #FFFFFF;
         }//buttons end
     }//text-area emd
 }//home-showcase-emd
+
+@media(max-width: 650px){
+    .text-area{
+        p{
+            font-size: 3.8vw;
+        }
+    }
+
+    .buttons{
+
+        button{
+            font-size: 3vw;
+         } 
+    }
+}
