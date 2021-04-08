@@ -1,4 +1,4 @@
-<header>
+<div class="primary-nav">
   <div class="search"></div>
   <nav>
     <a href="/">home</a>
@@ -6,7 +6,19 @@
     <a href="/services">services</a>
     <a href="/programs">programs</a>
   </nav>
-</header>
+</div>
+
+<div class="secondary-nav">
+  <div class="branding">
+    <img [src]="logo" class="logo">
+    <div class="brand-text">
+      <p>TECHNICAL EDUCATION AND SKILLS DEVELOPMENT AUTHORITY</p>
+      <h1>BAGUIO CITY SCHOOL<br>OF ARTS AND TRADES</h1>
+    </div>
+  </div>
+</div>
+
+
 <div class="container">
   <router-outlet></router-outlet>
 </div>

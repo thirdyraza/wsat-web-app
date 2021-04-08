@@ -5,7 +5,7 @@ $blk: #141414;
 $whi: #FFFFFF;
 // colors -----------------------------------------------
 
-header{
+.primary-nav{
     background-color: $blu;
     border-bottom: 4px $yel solid;
     padding: 25px 100px;
@@ -28,13 +28,43 @@ header{
             }//a hover end
         }//a end
     }//nav end
-}//header end
+}//primary end
 
 @media only screen and (min-width: 600px) {
-    header{
+    .primary-nav{
         flex-direction: row-reverse;
         justify-content: space-between;
         position: sticky;
+        top: 0;
         
-    }//header end
+    }//primary end
 }//media querie end
+
+.secondary-nav{
+    padding: 10px 0;
+    display: flex;
+
+    .branding{
+        display: flex;
+        align-items: center;
+        img{
+            width: 170px;
+            margin: 0 20px 0 50px;
+        }
+        .brand-text{
+            h1{
+                font-size: 35px;
+                font-weight: 700;
+                text-align: justify;
+                line-height: 30px;
+                color: $blu;
+            }
+            p{
+                font-size: 11px;
+                color: $blk;
+                text-align: center;
+                font-weight: 800;
+            }
+        }
+    }
+}

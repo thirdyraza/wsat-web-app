@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'wsat-web-app';
+  logo : string = "assets/images/bcsat-logo.png";
 }
