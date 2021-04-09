@@ -9,7 +9,7 @@ $smk: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}//flex center end
 // ------------------------------------------------------
 
 .primary-nav{
@@ -29,17 +29,17 @@ $smk: #f5f5f5;
             width: 20px;
             &:hover{
                 filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-            }
-        }
+            }//hover end
+        }//search end
         .burger{
             width: 23px;
             cursor: pointer;
 
             &:hover{
                 filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
-            }
-        }
-    }
+            }//hover end
+        }//burger end
+    }//primary nav end
 
     nav{
         display: grid;
@@ -61,8 +61,8 @@ $smk: #f5f5f5;
 @media (min-width: 600px) {
     .burger{
         display: none;
-    }
-}
+    }//burger end
+}//media end
 
 @media (max-width: 600px) {
     .search{
@@ -77,8 +77,8 @@ $smk: #f5f5f5;
          display: none;
             a{
                 font-size: 3.5vw;
-            }
-       }
+            }//a end
+       }//nav end
    }// primary nav end
 }//media querie end
 
@@ -96,8 +96,8 @@ $smk: #f5f5f5;
             font-weight: 600;
             font-size: 15px;
             color: rgb(117, 113, 113);
-        }
-    }
+        }//p end
+    }//general info end
 
     .branding{
         display: flex;
@@ -106,7 +106,7 @@ $smk: #f5f5f5;
         img{
             width: 170px;
             margin: 0 20px 0 0;
-        }
+        }//img end
 
         .brand-text{
 
@@ -115,16 +115,16 @@ $smk: #f5f5f5;
                 font-weight: 700;
                 line-height: 30px;
                 color: $blu;
-            }
+            }//h1 end
             p{
                 font-size: 11px;
                 color: $blk;
                 text-align: center;
                 font-weight: 800;
-            }
-        }
-    }
-}
+            }//p end
+        }//brand text end
+    }//branding end
+}//secondary nav end
 
 @media (max-width: 700px){
     .secondary-nav{
@@ -135,20 +135,20 @@ $smk: #f5f5f5;
             img{
                 width: 20vw;
                 margin: 0 10px 0 20px;
-            }
+            }//img end
 
             .brand-text{
 
                 h1{
                    font-size: 5.4vw;
                    line-height: 4vw;
-                }
+                }// h1 en
 
                 p{
                    font-size: 1.8vw;
-                }
-            }
-        }
+                }// p end
+            }// brand text end
+        }// branding end
     }// secondary end
 
     nav{
@@ -163,14 +163,77 @@ $smk: #f5f5f5;
     .general-info{
         display: none;
     }
-}
+}//media end
 
 // footer -----------------------------------------------
 
 footer{
-    padding: 50px 0;
+    padding: 80px 65px;
     background-color: $blu;
     border-top: $yel 4px solid;
+    color: $whi;
+
+    .footer{
+        display: flex;
+        justify-content: space-evenly;
+
+            
+        .leg{
+            h1{
+                font-variant: small-caps;
+                font-size: 30px;
+                margin-bottom: 10px;
+
+            }//h1 end
+            .shoes{
+                margin-bottom: 10px;
+
+                p{
+                    font-size: 13px;
+                }//p end
+            }//shoes end
+        }//knee end
+
+        .knee{
+            h1{
+                font-variant: small-caps;
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 13px;
+            }//p end
+        }//knee end
+    }// .footer end
+
+    // #copyright{
+    //     @include flexCenter();
+    //     color: $yel;
+    //     margin-top: 200px;
+    //     flex-direction: column;
+        
+
+    //     p{
+    //         font-size: 13px;
+    //     }
+    // }//copyright end
+}//footer end
+
+@media (max-width: 1000px){
+    .footer{
+        flex-direction: column;
+        @include flexCenter();
+        text-align: center;
+
+        .knee, .leg{
+            h1{
+                font-size: 25px;
+            }
+        } 
+        .knee{
+            margin-bottom: 65px;
+        }
+    }
 }
 
 // ------------------------------------------------------
