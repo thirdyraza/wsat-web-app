@@ -10,7 +10,6 @@ $smk: #f5f5f5;
 
 @mixin flexCenter() {
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -20,6 +19,7 @@ $smk: #f5f5f5;
     background-color: $blu;
 
     input{
+        margin-top: 100px;
         cursor: pointer;
         width: 800px;
         font-size: 15px;
