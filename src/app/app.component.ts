@@ -9,4 +9,5 @@ export class AppComponent {
   title = 'wsat-web-app';
   logo : string = "assets/images/bcsat-logo.png";
   searchIcon : string = "assets/images/search-icon.png";
+  burger : string = "assets/images/burger-menu.png";
 }
