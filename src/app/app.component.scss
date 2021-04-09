@@ -68,9 +68,11 @@ $smk: #f5f5f5;
     .search{
         margin-right: 20px;
     }
+
    .primary-nav{
         justify-content: right;
         padding: 25px 5vw;
+
        nav{
          display: none;
             a{
@@ -78,16 +80,24 @@ $smk: #f5f5f5;
             }
        }
    }// primary nav end
-   
-   .search{
-
-    }//search end
 }//media querie end
+
+// second nav -------------------------------------------
 
 .secondary-nav{
     padding: 10px 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: $whi;
+
+    .general-info{
+        p{
+            font-weight: 600;
+            font-size: 15px;
+            color: rgb(117, 113, 113);
+        }
+    }
 
     .branding{
         display: flex;
@@ -148,3 +158,19 @@ $smk: #f5f5f5;
             }
        }//nav end
 }// media end
+
+@media (max-width: 1100px){
+    .general-info{
+        display: none;
+    }
+}
+
+// footer -----------------------------------------------
+
+footer{
+    padding: 50px 0;
+    background-color: $blu;
+    border-top: $yel 4px solid;
+}
+
+// ------------------------------------------------------
