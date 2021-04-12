@@ -123,7 +123,7 @@ $smk: #f5f5f5;
             padding: 30px 50px;
             background-color: $whi;
             box-shadow: $blk 4px 4px 7px;
-            transition: .4s;
+            transition: .2s;
 
             &:hover{
                 transform: scale(1.03);
@@ -203,11 +203,12 @@ $smk: #f5f5f5;
     }//container end
 
     #main{
-        transition: .4s;
+        transition: .2s;
         background-color: $smk;
 
         &:hover{
-            transform: scale(1.02   );
+            transform: scale(1.01);
+            box-shadow: $blk 3px 3px 10px;
         }//hover end
 
         .img{
@@ -254,6 +255,12 @@ $smk: #f5f5f5;
             background-color: $smk;
             display: flex;
             justify-content: space-between;
+            transition: .2s;
+
+            &:hover{
+                transform: scale(1.01);
+                box-shadow: $blk 3px 3px 10px;
+            }
 
             .date{
                 font-size: 16px;
@@ -271,8 +278,6 @@ $smk: #f5f5f5;
             &:first-child{
                 margin-bottom: 20px;
                 .img{
-                    height: 200px;
-                    width: 200px;
                     background-image: url(https://images.pexels.com/photos/3974771/pexels-photo-3974771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
                     background-position: center;
                     background-size: cover;
@@ -280,7 +285,7 @@ $smk: #f5f5f5;
             }
             .img{
                 height: 200px;
-                width: 200px;
+                width: 250px;
                 background-image: url(https://images.pexels.com/photos/5821296/pexels-photo-5821296.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
                 background-position: center;
                 background-size: cover;
@@ -301,7 +306,11 @@ $smk: #f5f5f5;
 }
 
 @media(max-width: 700px){
-    #news{
+    #news{ 
+        
+        .container{
+            margin: 10px 1px;
+        }//container end
     
         h1{
             font-size: 6.5vw;
