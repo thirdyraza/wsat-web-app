@@ -17,26 +17,65 @@ $smk: #f5f5f5;
 // showcase-area ----------------------------------------
 
 .about-body{
-    padding: 100px 0;
+    .container{ 
+        padding: 0 65px;
+        padding-bottom: 100px;
+        padding-top: 70px;
+        
+        .text-area{
+            display: flex;
+            flex-direction: column;
+                .heading{
+                    h1{
+                        margin-bottom: 30px;
+                        color: $blu;
+                        font-size: 35px;
+                        span{
+                            font-size: 35px;
+                            color: $yel;
+                        }
+                    }// h1 end
+                }//heading end
+        }// text-area end
+    }// container end
+    
+    #admin{
+        background-color: $blu;
+        color: $whi;
+        transform: skewy( -1deg);
+    
+        .text-area{
+            transform: skewy( 1deg);
+            h1{
+                color: $whi;
+            }
+        }
+    }
+    #history{
+        background-color: $blu;
+        color: $whi;
+        padding-bottom: 100px;
+        padding-top: 70px;
+        transform: skewy( -1deg);
+    
+        .text-area{
+            transform: skewy( 1deg);
+            h1{
+                color: $whi;
+            }
+            p{
+                columns: 350px;
+            }
+        }
+    }
+    
 }
 
-.container{
-    padding: 0 5vw;
-    display: grid;
-    grid-row-gap: 100px;
-    
-    .text-area{
-        display: flex;
-        flex-direction: column;
-            .heading{
-                h1{
-                    color: $blu;
-                    font-size: 35px;
-                }// h1 end
-            }//heading end
-    }// text-area end
-}// container end
 
-.temporary{
-    height: 500px;
+@media (max-width: 700px){
+    .about-body{
+        .container{
+            padding: 0 6vw;
+        }
+    }
 }
