@@ -1,10 +1,39 @@
-.temporary{
-    height: 500px;
+// colors -----------------------------------------------
+
+$blu: #294A70;;
+$yel: #FFAB1F;;
+$blk: #141414;
+$whi: #FFFFFF;
+$smk: #f5f5f5;
+
+// mixins -----------------------------------------------
+
+@mixin flexCenter() {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// showcase-area ----------------------------------------
+
+.about-body{
+    padding: 100px 0;
+}
+
+.container{
+    padding: 0 65px;
+    display: grid;
+    grid-row-gap: 100px;
     
-    h1{
-        font-size: 4vw;
+    .text-area{
+        @include flexCenter();
+        flex-direction: column;
+        h1{
+            color: $blu;
+        }
     }
+}
+
+.temporary{
+    height: 500px;
 }
