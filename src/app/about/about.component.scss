@@ -21,18 +21,21 @@ $smk: #f5f5f5;
 }
 
 .container{
-    padding: 0 65px;
+    padding: 0 5vw;
     display: grid;
     grid-row-gap: 100px;
     
     .text-area{
-        @include flexCenter();
+        display: flex;
         flex-direction: column;
-        h1{
-            color: $blu;
-        }
-    }
-}
+            .heading{
+                h1{
+                    color: $blu;
+                    font-size: 35px;
+                }// h1 end
+            }//heading end
+    }// text-area end
+}// container end
 
 .temporary{
     height: 500px;
