@@ -27,16 +27,38 @@ $smk: #f5f5f5;
         display: flex;
 
         .search{
+            display: flex;
+            align-items: center;
+            background-color: $blu;
+            border: 2px solid $whi;
+            border-radius: 50px;
+
+            input{
+                border: none;
+                outline: none;
+                background-color: unset;
+                color: $whi;
+                padding: 7px 15px;
+                font-size: 15px;
+            }
             img{
+                padding: 7px 15px;
+                border-radius: 0px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border: none;
+                border-left: $whi 2px solid;
+                outline: none;
                 width: 20px;
                 cursor: pointer;
+
                 &:hover{
-                    filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+                    // filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
                 }//hover end
             }
         }//search end
         .burger{
-            width: 23px;
+            width: 30px;
             cursor: pointer;
 
             &:hover{
@@ -63,13 +85,13 @@ $smk: #f5f5f5;
     }//nav end
 }//primary end
 
-@media (min-width: 700px) {
+@media (min-width: 780px) {
     .burger{
         display: none;
     }//burger end
 }//media end
 
-@media (max-width: 700px) {
+@media (max-width: 780px) {
     .search{
         margin-right: 7px;
     }
