@@ -1,10 +1,261 @@
-.temporary{
-    height: 500px;
+// colors -----------------------------------------------
+
+$blu: #294A70;
+$yel: #FFAB1F;;
+$blk: #141414;
+$whi: #FFFFFF;
+$smk: #f5f5f5;
+
+// mixins -----------------------------------------------
+
+@mixin flexCenter() {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+// showcase-area ----------------------------------------
+.about-showcase{
+    @include flexCenter();
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/1709003/pexels-photo-1709003.jpeg?cs=srgb&dl=pexels-icsa-1709003.jpg&fm=jpg");
     
-    h1{
-        font-size: 4vw;
+    .text-area{
+
+        h1{
+            font-size: 41px;
+            text-shadow: $blk 3px 3px 6px;
+            color: $whi;
+            span{
+                font-size: 41px;
+                text-shadow: $blk 3px 3px 6px;
+                color: $yel;
+            }
+        }
+    }
+}
+
+.about-body{
+    hr{
+        margin-top: 20px;
+        border-top: 1px solid $blu;
+    }
+    .container{ 
+        background-color: $whi;
+        padding: 0 65px;
+        
+        .text-area{
+            display: flex;
+            flex-direction: column;
+            
+            p{
+                margin-bottom: 30px;
+            }
+                .heading{
+                    h1{
+                        margin-bottom: 30px;
+                        color: $blu;
+                        font-size: 35px;
+                        padding-top: 50px;
+                        span{
+                            font-size: 35px;
+                            color: $yel;
+                        }
+                    }// h1 end
+                }//heading end
+        }// text-area end
+    }// container end
+    
+    #schoolb{
+        
+        color: $blk;
+
+    
+        .text-area{
+          
+            h1{
+                color: $blu;
+            }
+            p{
+                
+            }
+        }
+    }
+    #tvet{
+        background-color: $blu;
+        color: $whi;
+        transform: skewy( -1deg);
+        
+        .text-area{
+            transform: skewy( 1deg);
+            h1{
+                color: $whi;
+            }
+            p{
+                columns: 1000px;
+            }
+            a{
+                color: $whi;        
+               
+               
+            }
+            a:hover {
+                color: $yel;        
+                
+            }
+            ul{
+                padding-bottom: 20px;  
+                margin: auto;  
+            }
+            li{
+                padding-bottom: 10px;
+            }
+          
+           
+        }
+    }
+    
+    #highlights{
+        padding: 90px 0;
+        background-color: $whi;
+    
+        h1{
+            margin-left: 95px;
+            font-size: 40px;
+            color: $blu;
+            margin-bottom: 40px;
+    
+            span{
+                font-size: 40px;
+                color: $yel;
+            }// span end
+        }//h1 end
+        
+    }// #highlights end
+    .highlights{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    
+        .container{
+            width: 650px;
+            padding: 0 0 10px 0;
+            margin: 10px;
+        }//container end
+    
+        #main{
+            transition: .2s;
+            background-color: $smk;
+    
+            &:hover{
+                transform: scale(1.01);
+                box-shadow: $blk 3px 3px 10px;
+            }//hover end
+    
+            .img{
+                height: 300px;
+                background-image: url(https://www.tesda.gov.ph/Uploads/Image/taguig.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: bottom center;
+                @include flexCenter();
+    
+                
+                h2{
+                    color: $whi;
+                    font-size: 30px;
+                    text-shadow: $blk 2px 2px 3px;
+                }//h2 end
+            }//img end
+    
+            .text-area{
+                display: flex;
+                flex-direction: column;
+                padding: 20px;
+    
+                .date{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: rgb(117, 113, 113);
+                    margin-bottom: 10px;
+                }//date end
+                p{
+                    font-size: 14px;
+                    color: $blk;
+                }//p end
+            }//text area end
+        }//main end
+    
+        #sub{
+            padding-bottom: 0;
+            display: flex;
+            flex-direction: column;
+    
+            .sub1{
+                height: 220px;
+                background-color: $smk;
+                display: flex;
+                justify-content: space-between;
+                transition: .2s;
+    
+                &:hover{
+                    transform: scale(1.01);
+                    box-shadow: $blk 3px 3px 10px;
+                }
+    
+                .date{
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: rgb(117, 113, 113);
+                    margin: 20px;
+                }//date end
+    
+                p{
+                    font-size: 14px;
+                    color: $blk;
+                    padding: 20px;
+                }//p end
+    
+                &:first-child{
+                    margin-bottom: 20px;
+                    .img{
+                        background-image: url(https://static.wixstatic.com/media/efa800_5457dfe3034b4e589d6509d7e6de887b~mv2.jpg);
+                        background-position: center;
+                        background-size: cover;
+                    }
+                }
+                .img{
+                    height: 200px;
+                    width: 250px;
+                    background-image: url(https://lh3.googleusercontent.com/proxy/TWVislQqhst7IYbDr_PMIweCx8Jmrvc_hBbK6ZGj7YJUEAzWtxVge4-CTKBGwA5scXUmbVecvltzXVB2IDyxe46pHbpQ0obmdQ0spmFdW1HlauBR-Iqp332FNF1zfwNYw7_j6MdVzfq99g);
+                    background-position: center;
+                    background-size: cover;
+                }
+            }
+        }
+    
+    }// .highlights end
+}
+
+
+@media (max-width: 700px){
+    .about-body{
+        .container{
+            padding: 0 6vw;
+
+            .text-area{
+                .heading{
+                    h1{
+                        font-size: 6.5vw;
+
+                        span{
+                            font-size: 6.5vw;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
