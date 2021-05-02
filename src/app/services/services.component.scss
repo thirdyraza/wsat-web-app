@@ -33,24 +33,28 @@ $smk: #f5f5f5;
     }
   }
 }
+
+// .text-area{
+//   h1{
+//     text-align: center;
+//   }
+// }
 // service-student ----------------------------------------
 .student-service {
   .container {
     background-color: $whi;
-    padding: 0 65px;
+    padding: 60px 65px;
 
     .text-area {
       display: flex;
       flex-direction: column;
-      p {
-        margin-bottom: 70px;
-      }
+      margin-bottom: 30px;
+
       .heading {
         h1 {
-          margin-bottom: 30px;
+          margin-bottom: 10px;
           color: $blu;
           font-size: 35px;
-          padding-top: 50px;
           span {
             font-size: 35px;
             color: $yel;
@@ -80,13 +84,10 @@ $smk: #f5f5f5;
   // all table ----------------------------------------
 
   table {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 50px;
     border-collapse: collapse;
 
     td {
-      border: 0.5px solid $smk;
+      border: 2px solid $smk;
       padding: 14px;
     } //td end
 
@@ -102,16 +103,25 @@ $smk: #f5f5f5;
   #competency-container {
 
     .competency-table {
+      @include flexCenter();
       table {
-        border-collapse: separate;
         border-spacing: 0 15px;
+        box-shadow: 5px 5px 20px #1414141f;
+        margin-bottom: 20px;
 
-        tr:not(.thead) {
-          box-shadow: 1px 2px 9px 1px #1414141f;
+        .thead{
+          color: #fff;
+          td{
+            padding: 5px 25zpx;
+          }
+        }
 
-          &:hover {
-            background-color: $smk;
-          } // & end
+        tr{
+          text-align: center;
+        }
+
+        tr:nth-child(odd) {
+          background-color: $smk;
         } // tr end
       } // table end
 
@@ -124,41 +134,48 @@ $smk: #f5f5f5;
     background-color: $blu;
     color: $whi;
     padding-bottom: 50px;
+    transform: skewy(-1deg);
+
+    .child{
+    transform: skewy(1deg);
+    }
 
     .text-area {
       h1 {
+        margin-bottom: 0px;
         color: $whi;
       } // h1 end
-
-      p {
-        columns: 350px;
-      } //p end
     } //text-area end
 
-    table {
-      border-collapse: collapse;
-      border-spacing: 0 12px;
-      margin-bottom: 8px;
-
-      .thead {
-        background-color: $yel;
-        border: 1px solid $yel;
-      } //thead end
-
-      tr:nth-child(even) {
-        background-color: #f5f5f513;
-        color: $smk;
-      } // tr end
-    } //table end
-
-    .requirements-table {
+    .table-parent{
+      @include flexCenter();
+      flex-direction: column;
       table {
-        ul {
-          list-style: lower-roman;
-        } // ul end
-      } // table end
-    } // requirements table end
-
+        border-collapse: collapse;
+        border-spacing: 0 12px;
+        &:nth-child(1){
+          margin: 40px 0;
+        }
+  
+        .thead {
+          background-color: $yel;
+          border: 2px solid $yel;
+        } //thead end
+  
+        tr:nth-child(even) {
+          background-color: #f5f5f513;
+          color: $smk;
+        } // tr end
+      } //table end
+  
+      .requirements-table{
+        table {
+          ul {
+            list-style: lower-roman;
+          } // ul end
+        } // table end
+      } // requirements table end
+    }
   } //assessment-procedure end
 
 
@@ -194,9 +211,9 @@ $smk: #f5f5f5;
 }
 
 @media (max-width: 700px) {
-  .about-body {
+  .service-body {
     .container {
-      padding: 0 6vw;
+      padding: 50px 6vw;
 
       .text-area {
         .heading {
