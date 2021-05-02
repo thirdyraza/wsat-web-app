@@ -1,10 +1,215 @@
-.temporary{
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    h1{
-        font-size: 4vw;
+// colors -----------------------------------------------
+
+$blu: #294a70;
+$yel: #ffab1f;
+$blk: #141414;
+$whi: #ffffff;
+$smk: #f5f5f5;
+// mixins -----------------------------------------------
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// service-showcase ----------------------------------------
+.service-showcase {
+  @include flexCenter();
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/6140697/pexels-photo-6140697.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
+  .text-area {
+    h1 {
+      font-size: 41px;
+      text-shadow: $blk 3px 3px 6px;
+      color: $whi;
+      span {
+        font-size: 41px;
+        text-shadow: $blk 3px 3px 6px;
+        color: $yel;
+      }
     }
+  }
+}
+// service-student ----------------------------------------
+.student-service {
+  .container {
+    background-color: $whi;
+    padding: 0 65px;
+
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 70px;
+      }
+      .heading {
+        h1 {
+          margin-bottom: 30px;
+          color: $blu;
+          font-size: 35px;
+          padding-top: 50px;
+          span {
+            font-size: 35px;
+            color: $yel;
+          }
+        } // h1 end
+      } //heading end
+    } // text-area end
+  } // container end
+
+  #student {
+    background-color: $blu;
+    color: $whi;
+    transform: skewy(-1deg);
+
+    .text-area {
+      transform: skewy(1deg);
+      h1 {
+        color: $whi;
+      } //h1 end
+
+      p {
+        columns: 350px;
+      } //p end
+    } //text-area end
+  } //student end
+
+  // all table ----------------------------------------
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+
+    td {
+      border: 0.5px solid $smk;
+      padding: 14px;
+    } //td end
+
+    .thead {
+      td {
+        border: none;
+      } // .thead td end
+    }
+  } //table end
+
+  // national competency assessment ----------------------------------------
+
+  #competency-container {
+
+    .competency-table {
+      table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+
+        tr:not(.thead) {
+          box-shadow: 1px 2px 9px 1px #1414141f;
+
+          &:hover {
+            background-color: $smk;
+          } // & end
+        } // tr end
+      } // table end
+
+    } //calendar-table end
+  }//competency container end
+
+  // assessment procedure ----------------------------------------
+
+  #assessment-procedure {
+    background-color: $blu;
+    color: $whi;
+    padding-bottom: 50px;
+
+    .text-area {
+      h1 {
+        color: $whi;
+      } // h1 end
+
+      p {
+        columns: 350px;
+      } //p end
+    } //text-area end
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0 12px;
+      margin-bottom: 8px;
+
+      .thead {
+        background-color: $yel;
+        border: 1px solid $yel;
+      } //thead end
+
+      tr:nth-child(even) {
+        background-color: #f5f5f513;
+        color: $smk;
+      } // tr end
+    } //table end
+
+    .requirements-table {
+      table {
+        ul {
+          list-style: lower-roman;
+        } // ul end
+      } // table end
+    } // requirements table end
+
+  } //assessment-procedure end
+
+
+  // school calendar ----------------------------------------
+
+  #calendar-area {
+    .calendar-table {
+      table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+
+        tr:not(.thead) {
+          box-shadow: 1px 2px 9px 1px #1414141f;
+
+          &:hover {
+            background-color: $smk;
+          } // & end
+        } // tr end
+      } // table end
+    } //calendar-table end
+  } // calendar-area end
+} // student-service end
+
+.temporary {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-body {
+    .container {
+      padding: 0 6vw;
+
+      .text-area {
+        .heading {
+          h1 {
+            font-size: 6.5vw;
+
+            span {
+              font-size: 6.5vw;
+            }
+          }
+        }
+      }
+    }
+  }// .about-body end
+
 }
