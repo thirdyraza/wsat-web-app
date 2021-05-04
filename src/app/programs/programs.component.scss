@@ -15,7 +15,7 @@ $smk: #f5f5f5;
 }
 
 // showcase-area ----------------------------------------
-.about-showcase{
+.programs-showcase{
     @include flexCenter();
     height: 500px;
     background-position: center;
@@ -37,28 +37,28 @@ $smk: #f5f5f5;
     }
 }
 
-.about-body{
+.programs-body{
     hr{
-        margin-top: 20px;
         border-top: 1px solid $blu;
     }
+
     .container{ 
         background-color: $whi;
         padding: 0 65px;
-        
+
         .text-area{
             display: flex;
             flex-direction: column;
+            padding: 60px 0;
             
             p{
-                margin-bottom: 30px;
+                
             }
                 .heading{
                     h1{
                         margin-bottom: 30px;
                         color: $blu;
                         font-size: 35px;
-                        padding-top: 50px;
                         span{
                             font-size: 35px;
                             color: $yel;
@@ -66,63 +66,36 @@ $smk: #f5f5f5;
                     }// h1 end
                 }//heading end
         }// text-area end
+
+        
+
+        &:nth-child(even){
+            background-color: $blu;
+            transform: skewy( -1deg);
+
+            .text-area{
+                transform: skewy( 1deg);
+                color: $whi;
+
+                .heading{
+                    h1{
+                        color: $whi;
+                    }//h1 end
+                }//heading end
+            }// text-area end
+        }// container nth child end
     }// container end
     
-    #schoolb{
-        
-        color: $blk;
 
     
-        .text-area{
-          
-            h1{
-                color: $blu;
-            }
-            p{
-                
-            }
-        }
-    }
-    #tvet{
-        background-color: $blu;
-        color: $whi;
-        transform: skewy( -1deg);
-        
-        .text-area{
-            transform: skewy( 1deg);
-            h1{
-                color: $whi;
-            }
-            p{
-                columns: 1000px;
-            }
-            a{
-                color: $whi;        
-               
-               
-            }
-            a:hover {
-                color: $yel;        
-                
-            }
-            ul{
-                padding-bottom: 20px;  
-                margin: auto;  
-            }
-            li{
-                padding-bottom: 10px;
-            }
-          
-           
-        }
-    }
-    
+
+// highlights -------------------------------------------
+
     #highlights{
         padding: 90px 0;
         background-color: $whi;
     
         h1{
-            margin-left: 95px;
             font-size: 40px;
             color: $blu;
             margin-bottom: 40px;
@@ -139,7 +112,7 @@ $smk: #f5f5f5;
         flex-wrap: wrap;
         justify-content: center;
     
-        .container{
+        .containers{
             width: 650px;
             padding: 0 0 10px 0;
             margin: 10px;
@@ -161,7 +134,6 @@ $smk: #f5f5f5;
                 background-repeat: no-repeat;
                 background-position: bottom center;
                 @include flexCenter();
-    
                 
                 h2{
                     color: $whi;
@@ -181,6 +153,7 @@ $smk: #f5f5f5;
                     color: rgb(117, 113, 113);
                     margin-bottom: 10px;
                 }//date end
+
                 p{
                     font-size: 14px;
                     color: $blk;
@@ -241,7 +214,7 @@ $smk: #f5f5f5;
 
 
 @media (max-width: 700px){
-    .about-body{
+    .programs-body{
         .container{
             padding: 0 6vw;
 
