@@ -33,3 +33,252 @@ $smk: #f5f5f5;
     }
   }
 }
+// service-student ----------------------------------------
+.student-service {
+  .container {
+    background-color: $whi;
+    padding: 0 65px;
+
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      p {
+        margin-bottom: 70px;
+      }
+      .heading {
+        h1 {
+          margin-bottom: 30px;
+          color: $blu;
+          font-size: 35px;
+          padding-top: 50px;
+          span {
+            font-size: 35px;
+            color: $yel;
+          }
+        } // h1 end
+      } //heading end
+    } // text-area end
+  } // container end
+
+  #student {
+    background-color: $blu;
+    color: $whi;
+    transform: skewy(-1deg);
+
+    .text-area {
+      transform: skewy(1deg);
+      h1 {
+        color: $whi;
+      } //h1 end
+
+      p {
+        columns: 350px;
+      } //p end
+    } //text-area end
+  } //student end
+
+  // all table ----------------------------------------
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+
+    td {
+      border: 0.5px solid $smk;
+      padding: 14px;
+    } //td end
+
+    .thead {
+      height: 65px;
+      background-color: #294a70;
+      color: #fff;
+      td {
+        border: none;
+      } // .thead td end
+    }
+  } //table end
+
+  // national competency assessment ----------------------------------------
+
+  #competency-container {
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0 12px;
+      margin-bottom: 8px;
+    }
+
+    .competency-table {
+      table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+        width: 60%;
+
+        tr:not(.thead) {
+          height: 30px;
+          box-shadow: 1px 2px 9px 1px #1414141f;
+
+          &:hover {
+            background-color: $smk;
+          } // & end
+        } // tr end
+      } // table end
+
+    } //competency-table end
+
+      .quali-td{ width: 40%; text-align: center; }
+      .assess-td{ width: 25%; text-align: center;}
+      .accnum-td{ width: 35%; text-align: center; }
+
+  }//competency container end
+
+  // assessment procedure ----------------------------------------
+
+  #assessment-procedure {
+    background-color: $blu;
+    color: $whi;
+    padding-bottom: 50px;
+
+    .text-area {
+      h1 {
+        color: $whi;
+      } // h1 end
+
+      p {
+        columns: 350px;
+      } //p end
+    } //text-area end
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0 12px;
+      margin-bottom: 8px;
+
+      .thead {
+        background-color: $yel;
+        border: 1px solid $yel;
+        text-align: center;
+      } //thead end
+
+      tr:nth-child(even) {
+        background-color: #f5f5f513;
+        color: $smk;
+      } // tr end
+    } //table end
+
+    .procedure-table{
+      table {
+        height: 183px; width: 80%;
+        ul {
+          list-style: lower-roman;
+        } // ul end
+      } // table end
+    } // procedure table end
+
+    .checkreq-td{ width: 50%; text-align: center; }
+    .wheresec-td{ width: 50%; text-align: center; }
+
+    .requirements-table {
+      table {
+        height: 347px; width: 80%;
+          ul {
+          list-style: lower-roman;
+          } // ul end
+      } // table end
+    } // requirements table end
+
+    .reqtitle-td{ width: 40%; }
+    .reqcontent-td{ width: 60%; text-align: center; }
+
+    .steps-table {
+      table {
+        height: 347px; width: 80%;
+          ul {
+          list-style: lower-roman;
+          } // ul end
+      } // table end
+    } // steps table end
+
+    .clistep-td{ width: 30%; }
+    .actstep-td{ width: 13%; }
+    .feestep-td{ width: 14%; }
+    .procstep-td{ width: 19%; }
+    .personstep-td{ width: 24%; }
+  } //assessment-procedure end
+
+
+  // school calendar ----------------------------------------
+
+  #calendar-area {
+
+    table {
+      border-collapse: collapse;
+      border-spacing: 0 12px;
+      margin-bottom: 8px;
+    }
+
+    .calendar-table {
+      table {
+        border-collapse: separate;
+        border-spacing: 0 15px;
+        width: 60%;
+
+        tr:not(.thead) {
+          box-shadow: 1px 2px 9px 1px #1414141f;
+          height: 30px;          
+
+          &:hover {
+            background-color: $smk;
+          } // & end
+        } // tr end
+      } // table end
+    } //calendar-table end
+
+    .date-td{ width: 40%; text-align: center; }
+    .events-td{ width: 60%; text-align: center; }
+
+  } // calendar-area end
+} // student-service end
+
+.temporary {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-body {
+    .container {
+      padding: 0 6vw;
+
+      .text-area {
+        .heading {
+          h1 {
+            font-size: 6.5vw;
+
+            span {
+              font-size: 6.5vw;
+            }
+          }
+        }// .heading end
+      }// .text-area end
+      .competency-table{
+        table{
+          padding: 0 6vw;
+          width: 390px;
+          .quali-td{ width: 159px; }
+          .assess-td{ width: 79px; }
+          .accnum-td{ width: 152px; }
+        }
+      }
+    }// .container end
+  }// .about-body end
+  
+}
