@@ -104,33 +104,19 @@ $smk: #f5f5f5;
 
   #competency-container {
 
-    table {
-      border-collapse: collapse;
-      border-spacing: 0 12px;
-      margin-bottom: 8px;
-    }
-
     .competency-table {
       table {
-        border-collapse: separate;
-        border-spacing: 0 15px;
-        width: 60%;
-
+        width: 70%;      
         tr:not(.thead) {
           height: 30px;
-          box-shadow: 1px 2px 9px 1px #1414141f;
 
-          &:hover {
+          &:nth-child(odd) {
             background-color: $smk;
           } // & end
         } // tr end
       } // table end
 
     } //competency-table end
-
-      .quali-td{ width: 40%; text-align: center; }
-      .assess-td{ width: 25%; text-align: center;}
-      .accnum-td{ width: 35%; text-align: center; }
 
   }//competency container end
 
@@ -170,15 +156,12 @@ $smk: #f5f5f5;
 
     .procedure-table{
       table {
-        height: 183px; width: 80%;
+        height: 183px; width: 80%;        
         ul {
           list-style: lower-roman;
         } // ul end
       } // table end
     } // procedure table end
-
-    .checkreq-td{ width: 50%; text-align: center; }
-    .wheresec-td{ width: 50%; text-align: center; }
 
     .requirements-table {
       table {
@@ -189,8 +172,8 @@ $smk: #f5f5f5;
       } // table end
     } // requirements table end
 
-    .reqtitle-td{ width: 40%; }
-    .reqcontent-td{ width: 60%; text-align: center; }
+    .reqtitle-td{ width: 250px; }
+    .reqcontent-td{ width: 350px; text-align: center; }
 
     .steps-table {
       table {
@@ -200,12 +183,6 @@ $smk: #f5f5f5;
           } // ul end
       } // table end
     } // steps table end
-
-    .clistep-td{ width: 30%; }
-    .actstep-td{ width: 13%; }
-    .feestep-td{ width: 14%; }
-    .procstep-td{ width: 19%; }
-    .personstep-td{ width: 24%; }
   } //assessment-procedure end
 
 
@@ -227,17 +204,12 @@ $smk: #f5f5f5;
 
         tr:not(.thead) {
           box-shadow: 1px 2px 9px 1px #1414141f;
-          height: 30px;          
-
           &:hover {
             background-color: $smk;
           } // & end
         } // tr end
       } // table end
     } //calendar-table end
-
-    .date-td{ width: 40%; text-align: center; }
-    .events-td{ width: 60%; text-align: center; }
 
   } // calendar-area end
 } // student-service end
@@ -253,32 +225,128 @@ $smk: #f5f5f5;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .about-body {
     .container {
       padding: 0 6vw;
-
       .text-area {
         .heading {
           h1 {
             font-size: 6.5vw;
-
             span {
               font-size: 6.5vw;
             }
           }
         }// .heading end
-      }// .text-area end
-      .competency-table{
-        table{
-          padding: 0 6vw;
-          width: 390px;
-          .quali-td{ width: 159px; }
-          .assess-td{ width: 79px; }
-          .accnum-td{ width: 152px; }
-        }
-      }
+      }// .text-area end      
     }// .container end
   }// .about-body end
-  
+
+  .competency-table{
+    table{      
+      thead{
+        display: none;
+      }// thead end           
+      tbody{    
+        tr{           
+          td{
+            display: block;
+            text-align: right;
+            position: relative;
+            width: 500px;         
+          }// td end
+        }// tr end
+      }// tbody end
+      td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1em;
+        text-align: left;
+        font-weight: bold;
+      }// td end      
+    }// table end
+  }// .competency-table end
+
+  .calendar-table{
+    table{      
+      thead{
+        display: none;
+      }// thead end           
+      tbody{    
+        tr{           
+          td{
+            display: block;
+            text-align: right;
+            position: relative;
+            width: 560px;         
+          }// td end
+        }// tr end
+      }// tbody end
+      td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1em;
+        text-align: left;
+        font-weight: bold;
+      }// td end      
+    }// table end
+  }// .calendar-table end
+
+  .procedure-table{
+    table{      
+      thead{
+        display: none;
+      }// thead end           
+      tbody{    
+        tr{           
+          td{
+            display: block;
+            text-align: right;
+            position: relative;
+            width: 580px;         
+          }// td end
+        }// tr end
+      }// tbody end
+      td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1em;
+        text-align: left;
+        font-weight: bold;
+      }// td end      
+    }// table end
+  }// .procedure-table end
+
+  .steps-table{
+    table{      
+      thead{
+        display: none;
+      }// thead end           
+      tbody{    
+        tr{           
+          td{
+            display: block;
+            text-align: right;
+            position: relative;
+            width: 580px;         
+          }// td end
+        }// tr end
+      }// tbody end
+      td:before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 1em;
+        text-align: left;
+        font-weight: bold;
+      }// td end      
+    }// table end
+  }// .steps-table end
 }
